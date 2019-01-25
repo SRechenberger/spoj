@@ -6,22 +6,22 @@ Just my attemps to solve the problems.
 
 ### Classical
 
-    - PRIME1
-    - ONP
-    - AIBOPH
-    - PALIN
+- PRIME1
+- ONP
+- AIBOPH
+- PALIN
 
 ### Basic
 
-    - SMPDIV
+- SMPDIV
 
 ### Tutorial 
 
-    - KNAPSACK
-    - TFIB
+- KNAPSACK
+- TFIB
 
 
 ## TODO
 
 ### Classical
-    - LPS
+- LPS
