@@ -1,25 +1,27 @@
-## Solutions for [SPOJ](www.spoj.com) Problems
+# Solutions for [SPOJ](www.spoj.com) Problems
 
 Just my attemps to solve the problems.
 
-### Solved
+## Solved
 
-#### Classical
+### Classical
 
     - PRIME1
     - ONP
     - AIBOPH
     - PALIN
 
-#### Basic
+### Basic
 
     - SMPDIV
 
-#### Tutorial 
+### Tutorial 
 
     - KNAPSACK
     - TFIB
 
-### TODO
-#### Classical
+
+## TODO
+
+### Classical
     - LPS
