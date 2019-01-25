@@ -50,8 +50,7 @@ for line_raw in sys.stdin:
 
     r = h if even else h-1
     carry = False
-    leq = leq_str(line[:h], line[r:])
-    if leq:
+    if leq_str(line[:h], line[r:]):
         left, carry = add_one(line[:h])
     else:
         left = line[:h]
