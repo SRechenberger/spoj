@@ -6,17 +6,13 @@ import Data.ByteString (ByteString)
 import qualified Data.ByteString as BS
 import qualified Data.ByteString.Char8 as C8
 
-
 add :: Word8 -> (Word8, Bool)
-add w 
-    | 48 <= w && w < 57 = (w + 1, False)
-    | w == 57 = (48, True)
-    | otherwise = error $ show w
-
+add 57 = (48, True)
+add w  = (w + 1, False)
 
 addOne :: ByteString -> (ByteString, Bool)
 addOne =
-    BS.foldr addOne' ([], True)
+    BS.foldr' addOne' ([], True)
     >>> (\(bs, c) -> if c then (49:bs, c) else (bs, c))
     >>> first BS.pack
   where
