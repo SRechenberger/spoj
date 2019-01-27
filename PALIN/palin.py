@@ -1,27 +1,27 @@
 import sys
 
-ADD = {
-    '0': ('1', False),
-    '1': ('2', False),
-    '2': ('3', False),
-    '3': ('4', False),
-    '4': ('5', False),
-    '5': ('6', False),
-    '6': ('7', False),
-    '7': ('8', False),
-    '8': ('9', False),
-    '9': ('0', True),
-}
+ADD = [
+    ('1', False),
+    ('2', False),
+    ('3', False),
+    ('4', False),
+    ('5', False),
+    ('6', False),
+    ('7', False),
+    ('8', False),
+    ('9', False),
+    ('0', True),
+]
 
 def add_one(string):
     n = len(string)
     to_return = ''
     
-    digit, carry = ADD[string[-1]]
+    digit, carry = ADD[ord(string[-1])-48]
     to_return = digit+to_return
     for i in range(2, n+1):
         if carry:
-            digit, carry = ADD[string[-i]]
+            digit, carry = ADD[ord(string[-i])-48]
         else:
             digit = string[-i]
         to_return = digit + to_return
