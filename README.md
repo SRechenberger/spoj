@@ -14,6 +14,7 @@ Just my attempts to solve the problems in various languages.
 ### Basic
 
 - SMPDIV
+- HS12HDPW
 
 ### Tutorial 
 
