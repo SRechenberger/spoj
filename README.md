@@ -12,6 +12,7 @@ Just my attempts to solve the problems in various languages.
 - PALIN
 - AGGRCOW
 - COINS
+- ACODE
 
 ### Basic
 
