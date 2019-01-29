@@ -42,6 +42,16 @@ cases t = do
   print $ searchMinDist (sort stables) cows left right (-1)
   cases (t-1)
 
+
+readStables :: Int -> IO ([Int], Int, Int)
+readStables t = (\is -> let (l, r) = minmax is in (is, l, r)) <$> stables
+  where
+    minmax :: [Int] -> (Int, Int)
+    minmax = foldr1' (\i (l, r) -> (min i l, max i r)) (\i -> (i, i))
+
+    stables :: IO [Int]
+    stables = forM [1..t] (const $ readInt <$> BS.getLine)
+    
 --------------------------------------------------------------------------------
 -- Algorithm -------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -67,13 +77,3 @@ searchMinDist stables cows left right acc
  where
   mid = (right + left) `div` 2
   debug = (acc, left, right, feasable stables mid cows)
-
-
-readStables :: Int -> IO ([Int], Int, Int)
-readStables t = (\is -> let (l, r) = minmax is in (is, l, r)) <$> stables
-  where
-    minmax :: [Int] -> (Int, Int)
-    minmax = foldr1' (\i (l, r) -> (min i l, max i r)) (\i -> (i, i))
-
-    stables :: IO [Int]
-    stables = forM [1..t] (const $ readInt <$> BS.getLine)
