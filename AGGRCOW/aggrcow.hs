@@ -51,7 +51,7 @@ readStables t = (\is -> let (l, r) = minmax is in (is, l, r)) <$> stables
 
     stables :: IO [Int]
     stables = forM [1..t] (const $ readInt <$> BS.getLine)
-    
+
 --------------------------------------------------------------------------------
 -- Algorithm -------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -76,4 +76,3 @@ searchMinDist stables cows left right acc
         searchMinDist stables cows left mid acc
  where
   mid = (right + left) `div` 2
-  debug = (acc, left, right, feasable stables mid cows)
