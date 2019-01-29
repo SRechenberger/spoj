@@ -10,6 +10,7 @@ Just my attempts to solve the problems in various languages.
 - ONP
 - AIBOPH
 - PALIN
+- AGGRCOW
 
 ### Basic
 
