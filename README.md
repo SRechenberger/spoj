@@ -11,6 +11,7 @@ Just my attempts to solve the problems in various languages.
 - AIBOPH
 - PALIN
 - AGGRCOW
+- COINS
 
 ### Basic
 
